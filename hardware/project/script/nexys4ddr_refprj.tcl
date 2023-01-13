@@ -167,7 +167,7 @@ set files [list \
  [file normalize "${origin_dir}/../../swerv_eh1/design/dmi/dmi_wrapper.v"] \
  [file normalize "${origin_dir}/../../swerv_eh1/design/lib/beh_lib.sv"] \
  [file normalize "${origin_dir}/../../swerv_eh1/design/include/global.h"] \
- [file normalize "${origin_dir}/../../swerv_eh1/design/include/swerv_types.sv"] \
+ [file normalize "${origin_dir}/../../swerv_eh1/design/include/veer_types.sv"] \
  [file normalize "${origin_dir}/../../swerv_eh1/design/dbg/dbg.sv"] \
  [file normalize "${origin_dir}/../../swerv_eh1/design/dec/dec.sv"] \
  [file normalize "${origin_dir}/../../swerv_eh1/design/dec/dec_decode_ctl.sv"] \
@@ -203,8 +203,8 @@ set files [list \
  [file normalize "${origin_dir}/../../swerv_eh1/configs/snapshots/default/pic_map_auto.h"] \
  [file normalize "${origin_dir}/../../swerv_eh1/design/pic_ctrl.sv"] \
  [file normalize "${origin_dir}/../../swerv_eh1/design/dmi/rvjtag_tap.sv"] \
- [file normalize "${origin_dir}/../../swerv_eh1/design/swerv.sv"] \
- [file normalize "${origin_dir}/../../swerv_eh1/design/swerv_wrapper.sv"] \
+ [file normalize "${origin_dir}/../../swerv_eh1/design/veer.sv"] \
+ [file normalize "${origin_dir}/../../swerv_eh1/design/veer_wrapper.sv"] \
  [file normalize "${origin_dir}/../../design_top/swerv_eh1_reference_design.v"] \
  [file normalize "${origin_dir}/../../swerv_eh1/design/lib/ahb_to_axi4.sv"] \
  [file normalize "${origin_dir}/../../swerv_eh1/design/lib/axi4_to_ahb.sv"] \
@@ -235,7 +235,7 @@ set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "Verilog Header" -objects $file_obj
 
-set file "$origin_dir/../../swerv_eh1/design/include/swerv_types.sv"
+set file "$origin_dir/../../swerv_eh1/design/include/veer_types.sv"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
@@ -416,12 +416,12 @@ set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
 
-set file "$origin_dir/../../swerv_eh1/design/swerv.sv"
+set file "$origin_dir/../../swerv_eh1/design/veer.sv"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
 
-set file "$origin_dir/../../swerv_eh1/design/swerv_wrapper.sv"
+set file "$origin_dir/../../swerv_eh1/design/veer_wrapper.sv"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "SystemVerilog" -objects $file_obj

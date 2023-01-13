@@ -34,7 +34,7 @@ module swerv_eh1_reference_design(
 
 
     
-	//instantiate swerv_wrapper
+	//instantiate veer_wrapper
 	wire [31:0] rv_reset_vec_w = `RV_RESET_VEC;
 	wire [31:1] rst_vec  = rv_reset_vec_w[31:1];//31'h0;
 	wire 		nmi_int;
@@ -303,7 +303,7 @@ module swerv_eh1_reference_design(
 
 
 
-	swerv_wrapper swerv_wrapper_inst
+	veer_wrapper swerv_wrapper_inst
 	(
 		.clk(clk),
 		.rst_l(rst_n),
