@@ -168,6 +168,10 @@ set files [list \
  [file normalize "${origin_dir}/../../swerv_eh1/design/lib/beh_lib.sv"] \
  [file normalize "${origin_dir}/../../swerv_eh1/design/include/global.h"] \
  [file normalize "${origin_dir}/../../swerv_eh1/design/include/veer_types.sv"] \
+ [file normalize "${origin_dir}/../../swerv_eh1/design/include/lpmul.sv"] \
+ [file normalize "${origin_dir}/../../swerv_eh1/design/include/sparrow.sv"] \
+ [file normalize "${origin_dir}/../../swerv_eh1/design/include/sprw_module.sv"] \
+ [file normalize "${origin_dir}/../../swerv_eh1/design/include/sprw_wrapper.sv"] \
  [file normalize "${origin_dir}/../../swerv_eh1/design/dbg/dbg.sv"] \
  [file normalize "${origin_dir}/../../swerv_eh1/design/dec/dec.sv"] \
  [file normalize "${origin_dir}/../../swerv_eh1/design/dec/dec_decode_ctl.sv"] \
@@ -240,6 +244,25 @@ set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
 
+set file "$origin_dir/../../swerv_eh1/design/include/lpmul.sv"
+set file [file normalize $file]
+set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
+set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
+
+set file "$origin_dir/../../swerv_eh1/design/include/sparrow.sv"
+set file [file normalize $file]
+set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
+set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
+
+set file "$origin_dir/../../swerv_eh1/design/include/sprw_module.sv"
+set file [file normalize $file]
+set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
+set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
+
+set file "$origin_dir/../../swerv_eh1/design/include/sprw_wrapper.sv"
+set file [file normalize $file]
+set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
+set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
 
 set file "$origin_dir/../../swerv_eh1/design/dbg/dbg.sv"
 set file [file normalize $file]
